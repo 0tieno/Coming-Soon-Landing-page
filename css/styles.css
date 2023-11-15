@@ -11,15 +11,84 @@ html, body{
     overflow: hidden;
 }
 
+img{
+    width: 100%;
+}
+
 header{
     position: relative;
-    background-image: url("../images/bg-img.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url("../images/bg-img.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 100px;
+    background-color: #333;
+    /* box-shadow: 0 0 10px rgba(23, 162, 184, 0.3); */
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul a{
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul a:hover{
+    color: #17a2b8;
+}
+
+nav ul a::after{
+    content: '';
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #17a2b8;
+    height: 3px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul a:hover:after{
+    width: 100%;
+}
+
+/* nav ul a:hover{
+    color: #17a2b8;
+} */
+
+.logo img{
+    width: 90px;
+}
+
 .landing-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.landing-inner img{
+    width: 60%;
+}
+
+/* .landing-inner{
     position: absolute;
     top: 0;
     left: 0;
@@ -28,10 +97,12 @@ header{
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding-top: 50px;
-}
+} */
 
 .landing h1{
     font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .landing p{
@@ -69,6 +140,17 @@ header{
 
 /* media queries */
 @media(max-width: 600px){
+    .logo{
+        display: none;
+    }
+
+    .nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+   
     .landing img{
         width: 70%;
     }
@@ -98,7 +180,23 @@ header{
         width: 20%;
     }
 
-    p{
+    .nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .countdown span{
+        font-size: 15px;
+    }
+
+    .countdown div{
+        padding: 10px;
+    }
+    
+
+    .logo, p{
         display: none;
     }
 }
