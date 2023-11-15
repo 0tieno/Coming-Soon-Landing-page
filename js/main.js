@@ -2,6 +2,7 @@ const countdown = document.querySelector('.countdown');
 
 // set launch date (ms)
 const launchDate = new Date('Dec 31, 2023 13:00:00').getTime();
+
 // update every second
 const intvl = setInterval(() => {
     // get todays date and time in (ms)
@@ -16,7 +17,7 @@ const intvl = setInterval(() => {
     const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Dispaly the result
+    // Display the result
     countdown.innerHTML = `
     <div>${days}<span>Days</span></div>
     <div>${hours}<span>Hours</span></div>
