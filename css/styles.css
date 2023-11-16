@@ -23,59 +23,6 @@ header{
     height: 100vh;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 100px;
-    background-color: #333;
-    /* box-shadow: 0 0 10px rgba(23, 162, 184, 0.3); */
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-nav ul a{
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    padding: 5px 0;
-}
-
-nav ul a:hover{
-    color: #17a2b8;
-}
-
-nav ul a::after{
-    content: '';
-    width: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #17a2b8;
-    height: 3px;
-    position: absolute;
-    transition: 0.3s ease-in-out;
-}
-
-nav ul a:hover:after{
-    width: 100%;
-}
-
-/* nav ul a:hover{
-    color: #17a2b8;
-} */
-
-.logo img{
-    width: 90px;
-}
-
 .landing-inner{
     position: absolute;
     top: 50%;
